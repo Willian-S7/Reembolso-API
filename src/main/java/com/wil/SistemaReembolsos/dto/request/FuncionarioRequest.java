@@ -6,9 +6,9 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
 public record FuncionarioRequest(
-    @NotBlank 
+    @NotBlank (message = "Nome invalido")
     String nome,
-    @NotNull
+    @NotNull (message = "Cargo invalido ou nulo")
     Cargo cargo
 ) {
 
